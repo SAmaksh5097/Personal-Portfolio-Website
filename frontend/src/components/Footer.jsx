@@ -20,7 +20,7 @@ const Footer = () => {
           <span className="hidden sm:inline">&copy;</span>
           <span>{new Date().getFullYear()}</span>
           <span className="text-brand-muted">|</span>
-          <span className="font-medium text-brand-dark/80">Samaksh K Arzare</span>
+          <span className="font-medium text-brand-dark/80">Samaksh Arzare</span>
         </div>
       </div>
     </motion.footer>
