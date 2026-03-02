@@ -17,7 +17,7 @@ const Navbar = () => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-brand-navy/80"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-brand-white/80 border-b border-brand-muted/30"
     >
       <div className="flex items-center justify-between px-2 py-1 max-w-7xl mx-auto">
         {/* Logo */}
@@ -26,7 +26,7 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
           className="p-1"
         >
-          <img src={logo} alt="logo" className="w-16 border border-brand-blue/30 rounded-full" />
+          <img src={logo} alt="logo" className="w-16 border border-brand-muted/40 rounded-full" />
         </motion.div>
 
         {/* Desktop Nav */}
@@ -40,10 +40,10 @@ const Navbar = () => {
             >
               <a
                 href={link.href}
-                className="relative text-brand-cream font-inter text-lg tracking-wide
-                  hover:text-brand-blue transition-colors duration-300
+                className="relative text-brand-dark/80 font-inter text-lg tracking-wide
+                  hover:text-brand-dark transition-colors duration-300
                   after:content-[''] after:absolute after:left-0 after:-bottom-1
-                  after:w-0 after:h-[2px] after:bg-brand-blue after:transition-all after:duration-300
+                  after:w-0 after:h-[2px] after:bg-brand-warm after:transition-all after:duration-300
                   hover:after:w-full"
               >
                 {link.label}
@@ -55,7 +55,7 @@ const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <motion.button
           whileTap={{ scale: 0.85 }}
-          className="md:hidden p-2 text-brand-cream"
+          className="md:hidden p-2 text-brand-dark"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -93,7 +93,7 @@ const Navbar = () => {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-brand-navy/95 backdrop-blur-lg border-t border-brand-teal/20"
+            className="md:hidden overflow-hidden bg-brand-white/95 backdrop-blur-xl border-t border-brand-muted/20"
           >
             <ul className="flex flex-col items-center gap-6 py-8">
               {navLinks.map((link, i) => (
@@ -107,8 +107,8 @@ const Navbar = () => {
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-brand-cream text-md font-inter tracking-wide
-                      hover:text-brand-blue transition-colors duration-300"
+                    className="text-brand-dark/80 font-inter tracking-wide
+                      hover:text-brand-dark transition-colors duration-300"
                   >
                     {link.label}
                   </a>

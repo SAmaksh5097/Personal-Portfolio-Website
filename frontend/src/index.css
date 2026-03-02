@@ -3,10 +3,11 @@
 
 /* Custom color palette */
 @theme {
-  --color-brand-navy: #0C2C55;
-  --color-brand-teal: #296374;
-  --color-brand-blue: #629FAD;
-  --color-brand-cream: #EDEDCE;
+  --color-brand-white: #F9F8F6;
+  --color-brand-light: #EFE9E3;
+  --color-brand-muted: #D9CFC7;
+  --color-brand-warm: #C9B59C;
+  --color-brand-dark: #2c2824;
   --font-inter: 'Inter', sans-serif;
 }
 
@@ -15,6 +16,8 @@ html, body, #root{
     scroll-behavior: smooth;
     font-family: 'Inter', sans-serif;
     cursor: none;
+    background: #F9F8F6;
+    color: #2c2824;
 }
 
 a, button, [role="button"], input, select, textarea {
@@ -35,7 +38,7 @@ a, button, [role="button"], input, select, textarea {
   :root {
     /* Standard properties for Firefox */
     scrollbar-width: thin;
-    scrollbar-color: #629FAD transparent;
+    scrollbar-color: #C9B59C transparent;
   }
 
   /* Webkit browsers (Chrome, Safari, Edge) */
@@ -49,13 +52,13 @@ a, button, [role="button"], input, select, textarea {
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #629FAD;
+    background-color: #D9CFC7;
     border-radius: 20px;
     border: 2px solid transparent;
     background-clip: content-box;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #296374;
+    background-color: #C9B59C;
   }
 }

@@ -1,13 +1,14 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import CustomCursor from './components/CustomCursor'
+import Footer from './components/Footer'
 const App = () => {
   return (
-    <div className='bg-brand-blue min-h-screen'>
+    <div className='min-h-screen'>
       <CustomCursor />
       <Navbar/>
+      <Footer/>
       
-      <h1>hero</h1>
       
     </div>
   )
