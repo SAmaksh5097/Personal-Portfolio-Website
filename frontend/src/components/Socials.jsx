@@ -30,7 +30,7 @@ const Socials = () => {
     ]
 
     return (
-        <div className="flex items-center gap-2 sm:gap-4">
+        <div className="flex items-center gap-2 sm:gap-4" id='contact'>
             {links.map((item, i) => (
                 <motion.a
                     key={item.name}
