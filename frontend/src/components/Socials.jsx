@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import linkedin from '../assets/icon-linkedin.svg'
 import github from '../assets/icon-github.svg'
-
+import codolio from '../assets/icon-codolio.svg'
 const Socials = () => {
     const links = [
         {
@@ -15,6 +15,18 @@ const Socials = () => {
             url: 'https://github.com/SAmaksh5097',
             icon: github,
         },
+        {
+            name:'Codolio',
+            url:'https://codolio.com/SAmaksh5097',
+            icon: codolio,
+        },
+        {
+            name:'Resume',
+            url:'https://google.com',
+            icon: 'https://img.icons8.com/ios-filled/50/000000/resume.png',
+
+        }
+
     ]
 
     return (
