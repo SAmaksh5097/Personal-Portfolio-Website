@@ -32,7 +32,7 @@ const AboutSection = () => {
 
   return (
     <section
-      className="relative h-full flex flex-col items-center justify-center px-6 sm:px-10 md:px-20 overflow-hidden"
+      className="relative h-full flex flex-col items-center justify-center p-4 sm:px-24 md:px-20 mt-12 overflow-hidden"
       id="about"
     >
       {/* Background blurs */}

@@ -17,7 +17,7 @@ const Socials = () => {
         },
         {
             name:'Codolio',
-            url:'https://codolio.com/SAmaksh5097',
+            url:'https://codolio.com/profile/sam_a11',
             icon: codolio,
         },
         {
