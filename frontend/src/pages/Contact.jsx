@@ -12,7 +12,7 @@ const iconMap = {
 
 const Contact = () => {
   return (
-    <section className="min-h-screen max-w-6xl mx-auto px-6 sm:px-8 md:px-12 py-24">
+    <section className="min-h-screen max-w-6xl mx-auto px-5 sm:px-8 md:px-12 py-20 sm:py-24">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -32,7 +32,7 @@ const Contact = () => {
       </motion.div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24">
         {/* Left — Contact Details */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}

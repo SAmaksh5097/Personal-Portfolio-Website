@@ -1,38 +1,12 @@
 import { motion } from 'framer-motion';
 import profileImg from '../assets/pic.jpeg';
 import SkillCard from './SkillCard';
-
+import { skills, about } from '../assets/data';
 const AboutSection = () => {
-    const skills = [
-        {
-            name: 'Java',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-        },
-        {
-            name: 'Python',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-        },
-        {
-            name: 'React',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-        },
-        {
-            name: 'Node.js',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-        },
-        {
-            name: 'Express.js',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
-        },
-        {
-            name: 'MongoDB',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-        },
-    ]
 
   return (
     <section
-      className="relative h-full flex flex-col items-center justify-center p-4 sm:px-24 md:px-20 mt-12 overflow-hidden"
+      className="relative min-h-screen md:h-full flex flex-col items-center justify-center px-5 py-16 sm:px-12 md:px-20 md:mt-30 overflow-hidden"
       id="about"
     >
       {/* Background blurs */}
@@ -49,7 +23,7 @@ const AboutSection = () => {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 sm:gap-10 md:gap-16 max-w-6xl w-full">
+      <div className="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16 max-w-6xl w-full">
         {/* Left — Photo + About text */}
         <div className="flex flex-col items-center md:items-start gap-6 md:flex-1">
           {/* Photo */}
@@ -94,9 +68,8 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="text-brand-dark/55 text-sm sm:text-base md:text-lg leading-relaxed max-w-md text-center md:text-left"
           >
-            I'm a Computer Science student passionate about building clean,
-            performant, and user-friendly applications. I love turning complex
-            problems into simple, elegant solutions.
+            {about}
+            
           </motion.p>
         </div>
 
@@ -111,7 +84,7 @@ const AboutSection = () => {
           >
             Tech Stack
           </motion.h3>
-          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-3 sm:gap-4 place-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 place-items-center">
             {skills.map((skill, index) => (
               <SkillCard key={skill.name} name={skill.name} icon={skill.icon} index={index} />
             ))}

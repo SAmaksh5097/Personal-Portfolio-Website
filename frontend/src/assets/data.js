@@ -34,3 +34,60 @@ export const details = [
         value: "Delhi, India"   
     }
 ]
+
+export const skills = [
+    {
+        name: 'Java',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    },
+    {
+        name: 'Python',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    },
+    {
+        name: 'React',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    },
+    {
+        name: 'Node.js',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    },
+    {
+        name: 'Express.js',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+    },
+    {
+        name: 'MongoDB',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    },
+]
+
+export const about = "I'm a pre-final year CS undergrad driven by a curiosity for technology 💻 & a desire to solve complex real-world problems 🌍. I have a strong foundation in Data Structures & Algo using JAVA.  I am passionate about building clean, performant, and user-friendly applications."
+
+import linkedin from '../assets/icon-linkedin.svg'
+import github from '../assets/icon-github.svg'
+import codolio from '../assets/icon-codolio.svg'
+export const links = [
+        {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/samaksh-arzare-925779294',
+            icon: linkedin,
+        },
+        {
+            name: 'GitHub',
+            url: 'https://github.com/SAmaksh5097',
+            icon: github,
+        },
+        {
+            name:'Codolio',
+            url:'https://codolio.com/profile/sam_a11',
+            icon: codolio,
+        },
+        {
+            name:'Resume',
+            url:'https://drive.google.com/file/d/1Y6rCP8WGzkQIfybh15w2zJ4WTh_DgFWK/view?usp=drive_link',
+            icon: 'https://img.icons8.com/ios-filled/50/000000/resume.png',
+
+        }
+
+    ]
