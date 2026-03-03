@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import {Analytics} from '@vercel/analytics/react'
 const App = () => {
   return (
     <>
@@ -16,7 +17,9 @@ const App = () => {
           <Route path='/projects' element={<Projects/>}/>
           <Route path='/contact' element={<Contact/>}/>
         </Routes>
+
       </div> 
+      <Analytics />
       <Footer/>
     </>
   )

@@ -8,7 +8,8 @@ export const projects = [
         title: 'Personal Portfolio Website',
         description: 'A personal portfolio website built with React and Tailwind CSS',
         image: portf,
-        github:'https://github.com/SAmaksh5097/Personal-Portfolio-Website'
+        github:'https://github.com/SAmaksh5097/Personal-Portfolio-Website',
+        link:'https://samaksh-arzare.vercel.app/'
     },
     {
         title: 'ProPlanner',
