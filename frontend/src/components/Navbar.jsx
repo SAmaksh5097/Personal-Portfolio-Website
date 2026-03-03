@@ -5,7 +5,7 @@ import { LucideMenu, LucideX } from 'lucide-react'
 import { Link } from 'react-router-dom'
 const navLinks = [
   { label: 'About Me', href: '#about' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Projects', href: '/projects' },
   { label: 'Contact Me', href: '#contact' },
 ]
 
@@ -17,7 +17,7 @@ const Navbar = () => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="fixed left-0 right-0 z-50 backdrop-blur-xl bg-brand-white/80 border-b border-brand-muted/30"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-brand-white/80 border-b border-brand-muted/30"
     >
       <div className="flex items-center justify-between px-2 py-1 max-w-7xl mx-auto">
         {/* Logo */}
@@ -107,14 +107,17 @@ const Navbar = () => {
                   exit={{ x: 30, opacity: 0 }}
                   transition={{ delay: i * 0.08, duration: 0.3 }}
                 >
-                  <a
+                  <Link to={link.href}>
+                  {link.label}
+                  </Link>
+                  {/* <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
                     className="text-brand-dark/80 font-inter tracking-wide
                       hover:text-brand-dark transition-colors duration-300"
                   >
                     {link.label}
-                  </a>
+                  </a> */}
                 </motion.li>
               ))}
             </ul>

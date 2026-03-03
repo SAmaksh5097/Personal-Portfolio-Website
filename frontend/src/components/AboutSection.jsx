@@ -66,7 +66,7 @@ const AboutSection = () => {
               <img
                 src={profileImg}
                 alt="Samaksh"
-                className="w-3 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-center object-cover
+                className="w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-center object-cover
                   border-2 border-brand-light shadow-lg"
               />
             </div>
