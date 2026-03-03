@@ -41,7 +41,7 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-brand-white/80 border-b border-brand-muted/30"
     >
-      <div className="flex items-center justify-between px-2 py-1 max-w-7xl mx-auto">
+      <div className="flex items-center justify-between px-3 sm:px-4 md:px-6 py-1 max-w-7xl mx-auto">
         {/* Logo */}
         <Link to={'/'}>
             <motion.div

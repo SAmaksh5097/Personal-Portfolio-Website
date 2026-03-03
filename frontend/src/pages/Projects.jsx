@@ -5,7 +5,7 @@ import { projects } from '../assets/data'
 
 const Projects = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 py-24">
+    <section className="max-w-6xl mx-auto px-5 sm:px-8 md:px-12 py-20 sm:py-24">
       {/* Page Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}

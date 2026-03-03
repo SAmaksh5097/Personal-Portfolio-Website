@@ -17,23 +17,23 @@ const Hero = () => {
   const name = "Samaksh";
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-8 sm:px-12 md:px-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center px-5 sm:px-12 md:px-20 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Subtle gradient orb */}
         <motion.div
-          className="absolute top-1/4 -right-20 w-[500px] h-[500px] rounded-full bg-brand-muted/20 blur-3xl"
+          className="absolute top-1/4 -right-20 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] rounded-full bg-brand-muted/20 blur-3xl"
           animate={{ scale: [1, 1.1, 1], x: [0, 20, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
-          className="absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full bg-brand-warm/15 blur-3xl"
+          className="absolute -bottom-20 -left-20 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-brand-warm/15 blur-3xl"
           animate={{ scale: [1, 1.15, 1], y: [0, -20, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
         />
 
         {/* Signature SVG */}
-        <div className="absolute top-1/3 left-8 w-full max-w-[500px] opacity-15">
+        <div className="absolute top-1/3 left-4 sm:left-8 w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] opacity-15">
           <svg viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.path
               d="M10 100 Q 50 10, 100 100 T 200 100 T 300 100 T 400 100 T 500 100"
@@ -59,7 +59,7 @@ const Hero = () => {
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-7xl sm:text-8xl md:text-9xl font-bold leading-none text-brand-dark tracking-tight"
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-brand-dark tracking-tight"
           >
             Hi
           </motion.h1>
@@ -67,7 +67,7 @@ const Hero = () => {
             initial={{ y:80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{duration:0.7, ease:'easeInOut'}}
-          className="text-6xl sm:text-7xl md:text-8xl origin-bottom-right inline-block">
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl origin-bottom-right inline-block">
             👋🏻
           </motion.span>
           
@@ -80,7 +80,7 @@ const Hero = () => {
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="text-7xl sm:text-8xl md:text-9xl font-bold leading-none text-brand-dark tracking-tight mr-4 sm:mr-6"
+              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-brand-dark tracking-tight mr-3 sm:mr-6"
             >
               I'm
             </motion.span>
@@ -92,7 +92,7 @@ const Hero = () => {
                   variants={letterVariants}
                   initial="hidden"
                   animate="visible"
-                  className="text-7xl sm:text-8xl md:text-9xl font-bold leading-none text-brand-warm tracking-tight"
+                  className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-brand-warm tracking-tight"
                 >
                   {char}
                 </motion.span>
