@@ -2,7 +2,14 @@
 import propl from '../assets/proplanss.png'
 import dailyp from '../assets/dailyplss.png'
 import portf from '../assets/portfolioss.png'
+import pricepred from '../assets/pricepredss.png'
 export const projects = [
+    {
+        title: 'Personal Portfolio Website',
+        description: 'A personal portfolio website built with React and Tailwind CSS',
+        image: portf,
+        github:'https://github.com/SAmaksh5097/Personal-Portfolio-Website'
+    },
     {
         title: 'ProPlanner',
         description: 'Full stack project roadmap generator built with React, Node.js, and Google Gemini API',
@@ -12,17 +19,18 @@ export const projects = [
 
     },
     {
+        title: 'Vehicle Price Prediction & Analytics Platform',
+        description:'Platform to predict vehicle prices & get market value insights using ML model, built with Python, Flask.',
+        image:pricepred,
+        github:'https://github.com/SAmaksh5097/price-prediction-project',
+        link: 'https://project-7i3x.onrender.com/'
+    },
+    {
         title: 'Daily Planner',
         description: 'A simple daily planner app built with React and Tailwind CSS',
         image: dailyp,
         link: 'https://daily-planner-app-black.vercel.app',
         github:'https://github.com/SAmaksh5097/Daily-Planner-App'
-    },
-    {
-        title: 'Personal Portfolio Website',
-        description: 'A personal portfolio website built with React and Tailwind CSS',
-        image: portf,
-        github:'https://github.com/SAmaksh5097/Personal-Portfolio-Website'
     },
 ]
 
