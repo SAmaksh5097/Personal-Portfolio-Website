@@ -1,34 +1,8 @@
 import { motion } from 'framer-motion';
 import profileImg from '../assets/pic.jpeg';
 import SkillCard from './SkillCard';
-
+import { skills, about } from '../assets/data';
 const AboutSection = () => {
-    const skills = [
-        {
-            name: 'Java',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-        },
-        {
-            name: 'Python',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-        },
-        {
-            name: 'React',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-        },
-        {
-            name: 'Node.js',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-        },
-        {
-            name: 'Express.js',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
-        },
-        {
-            name: 'MongoDB',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-        },
-    ]
 
   return (
     <section
@@ -94,8 +68,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="text-brand-dark/55 text-sm sm:text-base md:text-lg leading-relaxed max-w-md text-center md:text-left"
           >
-            I'm a pre-final year CS undergrad driven by a curiosity for technology 💻 & a desire to solve complex real-world problems 🌍. I have a strong foundation in Data Structures & Algo using JAVA.  I am passionate about building clean,
-            performant, and user-friendly applications.
+            {about}
             
           </motion.p>
         </div>

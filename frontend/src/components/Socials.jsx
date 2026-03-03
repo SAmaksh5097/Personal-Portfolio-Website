@@ -1,34 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import linkedin from '../assets/icon-linkedin.svg'
-import github from '../assets/icon-github.svg'
-import codolio from '../assets/icon-codolio.svg'
+import { links } from '../assets/data'
 const Socials = () => {
-    const links = [
-        {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/samaksh-arzare-925779294',
-            icon: linkedin,
-        },
-        {
-            name: 'GitHub',
-            url: 'https://github.com/SAmaksh5097',
-            icon: github,
-        },
-        {
-            name:'Codolio',
-            url:'https://codolio.com/profile/sam_a11',
-            icon: codolio,
-        },
-        {
-            name:'Resume',
-            url:'https://google.com',
-            icon: 'https://img.icons8.com/ios-filled/50/000000/resume.png',
-
-        }
-
-    ]
-
     return (
         <div className="flex items-center gap-2 sm:gap-4" id='contact'>
             {links.map((item, i) => (
