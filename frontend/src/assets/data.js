@@ -22,3 +22,15 @@ export const projects = [
         github:'https://google.com'
     },
 ]
+
+
+export const details = [
+    {
+        key: "Mail",
+        value: "samaksharzare.cs2004@gmail.com"
+    },
+    {
+        key: "Address",
+        value: "Delhi, India"   
+    }
+]
