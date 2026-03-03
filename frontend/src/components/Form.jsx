@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 const Form = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -11,9 +12,20 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission
-    console.log(formData)
-  }
+    emailjs.sendForm(import.meta.env.VITE_EMAIL_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_ID, e.target,{
+        publicKey: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
+    }).then((result)=>{
+        console.log(result.text);
+        alert('Message sent successfully!')
+    }).catch((error)=>{
+        console.log(error.text);
+
+    alert('Failed to send message.')
+    }
+
+    )   
+    setFormData({ name: '', email: '', message: '' })
+    }
 
   const inputClasses = `w-full border-b border-brand-muted/40 py-3 px-1
     text-brand-dark placeholder:text-brand-dark/30 text-sm
