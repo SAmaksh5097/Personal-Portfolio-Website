@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import profileImg from '../assets/logo.png';
+import profileImg from '../assets/pic.jpeg';
 import SkillCard from './SkillCard';
 
 const AboutSection = () => {
@@ -65,8 +65,8 @@ const AboutSection = () => {
               <div className="absolute -inset-6 rounded-full border border-brand-muted/20" />
               <img
                 src={profileImg}
-                alt="Samaksh Arzare"
-                className="w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-cover
+                alt="Samaksh"
+                className="w-3 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-center object-cover
                   border-2 border-brand-light shadow-lg"
               />
             </div>
