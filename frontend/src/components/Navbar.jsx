@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import logo from '../assets/logo.png'
 import { LucideMenu, LucideX } from 'lucide-react'
-
+import { Link } from 'react-router-dom'
 const navLinks = [
   { label: 'About Me', href: '#about' },
   { label: 'Projects', href: '#projects' },
@@ -21,13 +21,15 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between px-2 py-1 max-w-7xl mx-auto">
         {/* Logo */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="p-1"
-        >
-          <img src={logo} alt="logo" className="w-16 border border-brand-muted/40 rounded-full" />
-        </motion.div>
+        <Link to={'/'}>
+            <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="p-1"
+            >
+            <img src={logo} alt="logo" className="w-16 border border-brand-muted/40 rounded-full" />
+            </motion.div>
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-8">
@@ -39,6 +41,7 @@ const Navbar = () => {
               transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
             >
               <a
+
                 href={link.href}
                 className="relative text-brand-dark/80 font-inter text-lg tracking-wide
                   hover:text-brand-dark transition-colors duration-300
