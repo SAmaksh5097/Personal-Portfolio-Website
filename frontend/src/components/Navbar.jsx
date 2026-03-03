@@ -2,15 +2,37 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import logo from '../assets/logo.png'
 import { LucideMenu, LucideX } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+
 const navLinks = [
-  { label: 'About Me', href: '#about' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Contact Me', href: '#contact' },
+  { label: 'About Me', to: '/', hash: '#about' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'Contact Me', to: '/contact' },
 ]
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const handleNavClick = (link) => {
+    setMenuOpen(false)
+    if (link.hash) {
+      // If already on homepage, just scroll to section
+      if (location.pathname === '/') {
+        document.querySelector(link.hash)?.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        // Navigate to homepage first, then scroll after render
+        navigate('/')
+        setTimeout(() => {
+          document.querySelector(link.hash)?.scrollIntoView({ behavior: 'smooth' })
+        }, 100)
+      }
+    } else {
+      navigate(link.to)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
 
   return (
     <motion.nav
@@ -40,9 +62,8 @@ const Navbar = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
             >
-              <a
-
-                href={link.href}
+              <button
+                onClick={() => handleNavClick(link)}
                 className="relative text-brand-dark/80 font-inter text-lg tracking-wide
                   hover:text-brand-dark transition-colors duration-300
                   after:content-[''] after:absolute after:left-0 after:-bottom-1
@@ -50,7 +71,7 @@ const Navbar = () => {
                   hover:after:w-full"
               >
                 {link.label}
-              </a>
+              </button>
             </motion.li>
           ))}
         </ul>
@@ -107,17 +128,13 @@ const Navbar = () => {
                   exit={{ x: 30, opacity: 0 }}
                   transition={{ delay: i * 0.08, duration: 0.3 }}
                 >
-                  <Link to={link.href}>
-                  {link.label}
-                  </Link>
-                  {/* <a
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
+                  <button
+                    onClick={() => handleNavClick(link)}
                     className="text-brand-dark/80 font-inter tracking-wide
                       hover:text-brand-dark transition-colors duration-300"
                   >
                     {link.label}
-                  </a> */}
+                  </button>
                 </motion.li>
               ))}
             </ul>
