@@ -18,7 +18,7 @@ export const projects = [
     {
         title: 'Personal Portfolio Website',
         description: 'A personal portfolio website built with React and Tailwind CSS',
-        image:'',
+        image:'https://private-user-images.githubusercontent.com/167022519/557463295-6ecf0534-4259-4959-b9de-b33f68d0dc7b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzI1Mzc3ODMsIm5iZiI6MTc3MjUzNzQ4MywicGF0aCI6Ii8xNjcwMjI1MTkvNTU3NDYzMjk1LTZlY2YwNTM0LTQyNTktNDk1OS1iOWRlLWIzM2Y2OGQwZGM3Yi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMwM1QxMTMxMjNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iNzhhOWYxNTBjNGQzNDJhYjZmMTZjMzZiOGJkZThkZWNkYjM5NTFkNWQ5Mzk4MDAzOThiMmZhODc2NDZiZDc2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Jp3PumBBIC9K6gNyLCuKpedo1SnPt_WelXNxSGBN9PQ',
         github:'https://google.com'
     },
 ]
