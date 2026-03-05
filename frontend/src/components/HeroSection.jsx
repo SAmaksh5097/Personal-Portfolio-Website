@@ -64,9 +64,11 @@ const Hero = () => {
             Hi
           </motion.h1>
           <motion.span
-            initial={{ y:80, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{duration:0.7, ease:'easeInOut'}}
+            initial={{ y:0, opacity: 1 }}
+            animate={{ rotate:[0, 20, -10, 20, 0]}} 
+
+            transition={{duration:1.2, ease:'easeInOut', repeat:Infinity, delay:2, repeatDelay:1}}
+            
           className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl origin-bottom-right inline-block">
             👋🏻
           </motion.span>
