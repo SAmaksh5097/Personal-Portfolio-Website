@@ -3,6 +3,7 @@ import propl from '../assets/proplanss.png'
 import dailyp from '../assets/dailyplss.png'
 import portf from '../assets/portfolioss.png'
 import pricepred from '../assets/pricepredss.png'
+import rag from '../assets/ragpross.png'
 export const projects = [
     {
         title: 'Personal Portfolio Website',
@@ -18,6 +19,13 @@ export const projects = [
         link: 'https://pro-planner-app.vercel.app/',
         github:'https://github.com/SAmaksh5097/ProPlanner-App'
 
+    },
+    {
+        title: 'PersonalRAG',
+        description: 'A personal RAG engine to transform raw text input into an interactive knowledge base.',
+        image: rag,
+        github:'https://github.com/SAmaksh5097/RAG-Project',
+        link: 'https://rag-project-liart.vercel.app/'
     },
     {
         title: 'Vehicle Price Prediction & Analytics Platform',

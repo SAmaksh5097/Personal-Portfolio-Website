@@ -32,7 +32,7 @@ const ProjectCard = ({ project, index = 0 }) => {
           {project.title}
         </h3>
 
-        <p className="text-sm text-brand-dark/55 leading-relaxed line-clamp-2">
+        <p className="text-sm text-brand-dark/55 leading-relaxed line-clamp-3">
           {project.description}
         </p>
 
