@@ -105,7 +105,7 @@ export const links = [
         },
         {
             name:'Resume',
-            url:'https://drive.google.com/file/d/1Y6rCP8WGzkQIfybh15w2zJ4WTh_DgFWK/view?usp=drive_link',
+            url:'https://drive.google.com/file/d/1xr6OnmRv0ObctSzi7PxP8EBs0ps1J7S4/view?usp=drive_link',
             icon: 'https://img.icons8.com/ios-filled/50/000000/resume.png',
 
         }
