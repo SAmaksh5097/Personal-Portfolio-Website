@@ -10,14 +10,17 @@ export const projects = [
         description: 'A personal portfolio website built with React and Tailwind CSS',
         image: portf,
         github:'https://github.com/SAmaksh5097/Personal-Portfolio-Website',
-        link:'https://samaksh-arzare.vercel.app/'
+        link:'https://samaksh-arzare.vercel.app/',
+        skills: ['React', 'Tailwind CSS', 'Framer Motion']
     },
     {
         title: 'ProPlanner',
         description: 'Full stack project roadmap generator built with React, Node.js, and Google Gemini API',
         image: propl,
         link: 'https://pro-planner-app.vercel.app/',
-        github:'https://github.com/SAmaksh5097/ProPlanner-App'
+        github:'https://github.com/SAmaksh5097/ProPlanner-App',
+        skills: ['React', 'Node.js', 'Express.js', 'Google Gemini API']
+
 
     },
     {
@@ -25,21 +28,24 @@ export const projects = [
         description: 'A personal RAG engine to transform raw text input into an interactive knowledge base.',
         image: rag,
         github:'https://github.com/SAmaksh5097/RAG-Project',
-        link: 'https://rag-project-liart.vercel.app/'
+        link: 'https://rag-project-liart.vercel.app/',
+        skills: ['React', 'Node.js', 'Express.js', 'MongoDB','RAG']
     },
     {
         title: 'Vehicle Price Prediction & Analytics Platform',
         description:'Platform to predict vehicle prices & get market value insights using ML model, built with Python, Flask.',
         image:pricepred,
         github:'https://github.com/SAmaksh5097/price-prediction-project',
-        link: 'https://project-7i3x.onrender.com/'
+        link: 'https://project-7i3x.onrender.com/',
+        skills: ['Python', 'Flask', 'Machine Learning']
     },
     {
         title: 'Daily Planner',
         description: 'A simple daily planner app built with React and Tailwind CSS',
         image: dailyp,
         link: 'https://daily-planner-app-black.vercel.app',
-        github:'https://github.com/SAmaksh5097/Daily-Planner-App'
+        github:'https://github.com/SAmaksh5097/Daily-Planner-App',
+        skills: ['React', 'Tailwind CSS']
     },
 ]
 
@@ -56,6 +62,26 @@ export const details = [
 ]
 
 export const skills = [
+    {
+      name: 'HTML',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',  
+    },
+    {
+      name: 'CSS',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',  
+    },
+    {
+      name: 'JavaScript',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',  
+    },
+    {
+      name: 'TypeScript',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',  
+    },
+    {
+      name: 'Tailwind CSS',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',  
+    },
     {
         name: 'Java',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
@@ -80,6 +106,15 @@ export const skills = [
         name: 'MongoDB',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
     },
+    {
+      name: 'Git',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',  
+    },
+    {
+      name: 'Postman',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg',  
+    },
+
 ]
 
 export const about = "I'm a pre-final year CS undergrad driven by a curiosity for technology 💻 & a desire to solve complex real-world problems 🌍. I have a strong foundation in Data Structures & Algo using JAVA.  I am passionate about building clean, performant, and user-friendly applications."

@@ -1,12 +1,26 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import profileImg from '../assets/pic.jpeg';
 import SkillCard from './SkillCard';
 import { skills, about } from '../assets/data';
 const AboutSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const skillsPerView = 3;
+  const rotationInterval = 2000; // 2 seconds before rotating
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + skillsPerView) % skills.length);
+    }, rotationInterval);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const displayedSkills = skills.slice(currentIndex, currentIndex + skillsPerView);
 
   return (
     <section
-      className="relative min-h-screen md:h-full flex flex-col items-center justify-center px-5 py-16 sm:px-12 md:px-20 md:mt-30 overflow-hidden"
+      className="relative w-full flex flex-col px-5 py-16 sm:px-12 md:px-20 overflow-visible"
       id="about"
     >
       {/* Background blurs */}
@@ -23,16 +37,16 @@ const AboutSection = () => {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16 max-w-6xl w-full">
+      <div className="relative z-10 flex flex-col md:flex-row items-center md:items-center gap-8 md:gap-16 max-w-6xl w-full mx-auto overflow-visible">
         {/* Left — Photo + About text */}
-        <div className="flex flex-col items-center md:items-start gap-6 md:flex-1">
+        <div className="flex flex-col items-center md:items-start gap-6 md:flex-1 overflow-visible">
           {/* Photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true }}
-            className="flex-shrink-0"
+            className="flex-shrink-0 relative z-20 mt-8 md:mt-0"
           >
             <div className="relative">
               <div className="absolute -inset-3 rounded-full border border-brand-muted/40" />
@@ -65,7 +79,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.5 }}
             className="text-brand-dark/55 text-sm sm:text-base md:text-lg leading-relaxed max-w-md text-center md:text-left"
           >
             {about}
@@ -78,16 +92,26 @@ const AboutSection = () => {
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
             viewport={{ once: true }}
             className="text-brand-dark/40 text-xs font-medium tracking-widest uppercase mb-4 text-center md:text-left"
           >
-            Tech Stack
+            Skills & Tools
           </motion.h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 place-items-center">
-            {skills.map((skill, index) => (
-              <SkillCard key={skill.name} name={skill.name} icon={skill.icon} index={index} />
-            ))}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 place-items-center min-h-fit md:min-h-[200px] w-full">
+            <AnimatePresence mode="wait">
+              {displayedSkills.map((skill) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                  transition={{ duration: 0.4, ease: 'easeInOut' }}
+                >
+                  <SkillCard name={skill.name} icon={skill.icon} />
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
         </div>
       </div>

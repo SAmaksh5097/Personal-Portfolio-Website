@@ -23,6 +23,9 @@ const Footer = () => {
           <span className="font-medium text-brand-dark/80">Samaksh Arzare</span>
         </div>
       </div>
+      <div className="text-center py-3">
+        <h1 className="text-xs sm:text-sm text-brand-dark/60 font-medium tracking-wide">Website made with <span className="text-red-500">❤️</span> by <span className="text-brand-warm font-semibold">SAmaksh</span></h1>
+      </div>
     </motion.footer>
   )
 }
