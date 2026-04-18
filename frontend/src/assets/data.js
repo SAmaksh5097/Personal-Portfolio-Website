@@ -4,6 +4,7 @@ import dailyp from '../assets/dailyplss.png'
 import portf from '../assets/portfolioss.png'
 import pricepred from '../assets/pricepredss.png'
 import rag from '../assets/ragpross.png'
+import scrap from '../assets/scrapbookss.png'
 export const projects = [
     {
         title: 'Personal Portfolio Website',
@@ -30,6 +31,14 @@ export const projects = [
         github:'https://github.com/SAmaksh5097/RAG-Project',
         link: 'https://rag-project-liart.vercel.app/',
         skills: ['React', 'Node.js', 'Express.js', 'MongoDB','RAG']
+    },
+    {
+        title: 'ScrapBook',
+        description: 'A PERN-stack digital yearbook that transforms collaborative memories into a dynamic, date-wise editorial timeline.',
+        image: scrap,
+        github: 'https://github.com/SAmaksh5097/ScrapBook',
+        link: 'https://scrap-book-liart.vercel.app/',
+        skills: ['React', 'Node.js','Express.js','PostgreSQL']
     },
     {
         title: 'Vehicle Price Prediction & Analytics Platform',
