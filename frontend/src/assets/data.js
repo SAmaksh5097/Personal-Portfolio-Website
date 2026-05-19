@@ -5,6 +5,7 @@ import portf from '../assets/portfolioss.png'
 import pricepred from '../assets/pricepredss.png'
 import rag from '../assets/ragpross.png'
 import scrap from '../assets/scrapbookss.png'
+import jdfit from '../assets/jdfitss.png'
 export const projects = [
     {
         title: 'Personal Portfolio Website',
@@ -13,6 +14,14 @@ export const projects = [
         github:'https://github.com/SAmaksh5097/Personal-Portfolio-Website',
         link:'https://samaksh-arzare.vercel.app/',
         skills: ['React', 'Tailwind CSS', 'Framer Motion']
+    },
+    {
+        title: 'JDFit',
+        description: 'Full stack AI-powered LaTeX resume tailoring engine to eliminate manual overhead of updating resumes for different JD.',
+        image: jdfit,
+        github: 'https://github.com/SAmaksh5097/JDFit',
+        link:'https://jd-fit.vercel.app/',
+        skills: ['PERN Stack', 'Token oriented object notation', 'OpenAI API']
     },
     {
         title: 'ProPlanner',
