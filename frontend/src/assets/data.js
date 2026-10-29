@@ -6,6 +6,7 @@ import pricepred from '../assets/pricepredss.png'
 import rag from '../assets/ragpross.png'
 import scrap from '../assets/scrapbookss.png'
 import jdfit from '../assets/jdfitss.png'
+import automationss from '../assets/automationss.png'
 export const projects = [
     {
         title: 'Personal Portfolio Website',
@@ -22,6 +23,14 @@ export const projects = [
         github: 'https://github.com/SAmaksh5097/JDFit',
         link:'https://jd-fit.vercel.app/',
         skills: ['PERN Stack', 'Token oriented object notation', 'OpenAI API']
+    },
+    {
+        title:'Train Search Bot',
+        description: 'A conversational AI train-search assistant that uses natural-language input, Redis sessions, and Selenium browser automation to find train journeys.',
+        image: automationss,
+        github:'https://github.com/SAmaksh5097/Train-Search-Automation-Project',
+        link:'https://github.com/SAmaksh5097/Train-Search-Automation-Project',
+        skills:["Node.js", "Redis", 'Rate limiting', "Selenium WebDriver"]
     },
     {
         title: 'ProPlanner',
