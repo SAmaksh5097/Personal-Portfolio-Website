@@ -1,12 +1,15 @@
 import Navbar from './components/Navbar'
 import CustomCursor from './components/CustomCursor'
 import Footer from './components/Footer'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import {Analytics} from '@vercel/analytics/react'
 const App = () => {
+  const { pathname } = useLocation()
+  const footerClassName = pathname === '/' ? 'md:hidden' : ''
+
   return (
     <>
       <CustomCursor />
@@ -20,7 +23,7 @@ const App = () => {
 
       </div> 
       <Analytics />
-      <Footer/>
+      <Footer className={footerClassName}/>
     </>
   )
 }

@@ -2,13 +2,13 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Socials from './Socials'
 
-const Footer = () => {
+const Footer = ({ className = '' }) => {
   return (
     <motion.footer
       initial={{ y: 40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="left-0 right-0 z-40 bg-brand-white/80 backdrop-blur-xl border-t border-brand-muted/30"
+      className={`left-0 right-0 z-40 bg-brand-white/80 backdrop-blur-xl border-t border-brand-muted/30 ${className}`}
       id='footer'
     >
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-2 sm:py-3 gap-2 sm:gap-0">
