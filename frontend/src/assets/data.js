@@ -88,7 +88,10 @@ export const details = [
     }
 ]
 
-export const skills = [
+export const skillGroups = [
+  {
+    name: 'Languages',
+    skills: [
     {
       name: 'HTML',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',  
@@ -106,20 +109,38 @@ export const skills = [
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',  
     },
     {
-      name: 'Tailwind CSS',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',  
-    },
-    {
         name: 'Java',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    },
+    {
+        name: 'C#',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
     },
     {
         name: 'Python',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
     },
+    ],
+  },
+  {
+    name: 'Frontend',
+    skills: [
+    {
+      name: 'Tailwind CSS',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+    },
     {
         name: 'React',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    },
+    ],
+  },
+  {
+    name: 'Backend & Data',
+    skills: [
+    {
+        name: '.NET',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg',
     },
     {
         name: 'Node.js',
@@ -137,6 +158,11 @@ export const skills = [
         name: 'PostgreSQL',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
     },
+    ],
+  },
+  {
+    name: 'Tools',
+    skills: [
     {
       name: 'Git',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',  
@@ -145,10 +171,15 @@ export const skills = [
       name: 'Postman',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg',  
     },
-
+    {
+      name: 'Selenium',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg',
+    },
+    ],
+  },
 ]
 
-export const about = "I'm a pre-final year CS undergrad driven by a curiosity for technology 💻 & a desire to solve complex real-world problems 🌍. I have a strong foundation in Data Structures & Algo using JAVA.  I am passionate about building clean, performant, and user-friendly applications."
+export const about = "I'm a final year CS undergrad driven by a curiosity for technology 💻 & a desire to solve complex real-world problems 🌍. I have a strong foundation in Data Structures & Algo using JAVA. I specialize in the MERN & PERN stack and developing RAG pipelines to build context aware applications. I am passionate about building clean, performant, and user-friendly applications."
 
 import linkedin from '../assets/icon-linkedin.svg'
 import github from '../assets/icon-github.svg'

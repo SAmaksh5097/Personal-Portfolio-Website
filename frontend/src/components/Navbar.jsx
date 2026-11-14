@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import logo from '../assets/logo.png'
-import { LucideMenu, LucideX } from 'lucide-react'
+import { LucideMenu, LucideX, Moon, Sun } from 'lucide-react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 const navLinks = [
@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Contact Me', to: '/contact' },
 ]
 
-const Navbar = () => {
+const Navbar = ({ isDark, onToggleDark }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
@@ -18,15 +18,22 @@ const Navbar = () => {
   const handleNavClick = (link) => {
     setMenuOpen(false)
     if (link.hash) {
-      // If already on homepage, just scroll to section
-      if (location.pathname === '/') {
+      const scrollToSection = () => {
+        if (link.hash === '#about' && window.matchMedia('(min-width: 768px)').matches) {
+          const panels = document.getElementById('home-panels')
+          if (panels) {
+            const pageTop = panels.getBoundingClientRect().top + window.scrollY
+            window.scrollTo({ top: pageTop + window.innerHeight, behavior: 'smooth' })
+            return
+          }
+        }
         document.querySelector(link.hash)?.scrollIntoView({ behavior: 'smooth' })
-      } else {
-        // Navigate to homepage first, then scroll after render
+      }
+
+      if (location.pathname === '/') scrollToSection()
+      else {
         navigate('/')
-        setTimeout(() => {
-          document.querySelector(link.hash)?.scrollIntoView({ behavior: 'smooth' })
-        }, 100)
+        setTimeout(scrollToSection, 100)
       }
     } else {
       navigate(link.to)
@@ -55,6 +62,18 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-8">
+          <motion.li initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.25, duration: 0.4 }}>
+            <motion.button
+              type="button"
+              onClick={onToggleDark}
+              whileTap={{ scale: 0.9 }}
+              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              className="grid h-9 w-9 place-items-center rounded-full border border-brand-muted/50 bg-brand-light/50 text-brand-dark/75 transition-colors hover:border-brand-warm hover:text-brand-dark"
+            >
+              {isDark ? <Sun size={17} /> : <Moon size={17} />}
+            </motion.button>
+          </motion.li>
           {navLinks.map((link, i) => (
             <motion.li
               key={link.label}
@@ -120,6 +139,22 @@ const Navbar = () => {
             className="md:hidden overflow-hidden bg-brand-white/95 backdrop-blur-xl border-t border-brand-muted/20"
           >
             <ul className="flex flex-col items-center gap-6 py-8">
+              <motion.li
+                initial={{ x: -30, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 30, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <button
+                  type="button"
+                  onClick={onToggleDark}
+                  aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+                  className="inline-flex items-center gap-2 rounded-full border border-brand-muted/50 bg-brand-light/50 px-4 py-2 text-sm text-brand-dark/80 transition-colors hover:border-brand-warm"
+                >
+                  {isDark ? <Sun size={16} /> : <Moon size={16} />}
+                  <span>{isDark ? 'Light mode' : 'Dark mode'}</span>
+                </button>
+              </motion.li>
               {navLinks.map((link, i) => (
                 <motion.li
                   key={link.label}
