@@ -23,7 +23,7 @@ const Socials = () => {
                     <img
                         src={item.icon}
                         alt={item.name}
-                        className="w-4 h-4 sm:w-5 sm:h-5 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                        className={`w-4 h-4 sm:w-5 sm:h-5 opacity-70 group-hover:opacity-100 transition-opacity duration-300 ${['LinkedIn', 'GitHub', 'Resume'].includes(item.name) ? 'dark:invert' : ''}`}
                     />
                     <span className="hidden sm:inline text-sm text-brand-dark/70 group-hover:text-brand-dark transition-colors duration-300">
                         {item.name}

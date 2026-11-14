@@ -20,7 +20,7 @@ const HorizontalScroll = ({ children }) => {
   return (
     <>
       {/* Desktop: horizontal scroll */}
-      <div ref={containerRef} style={{ height: `${panelCount * 100}vh` }} className="relative hidden md:block">
+      <div id="home-panels" ref={containerRef} style={{ height: `${panelCount * 100}vh` }} className="relative hidden md:block">
         <div className="sticky top-0 h-screen overflow-hidden">
           <motion.div style={{ x }} className="flex h-full">
             {(Array.isArray(children) ? children : [children]).map((child, i) => (
